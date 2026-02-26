@@ -70,8 +70,6 @@ html,
 body {
   width: 100%;
   height: 100%;
-  min-height: 100svh;
-  min-height: 100dvh;
   margin: 0;
   overflow: hidden;
 }
@@ -86,10 +84,7 @@ body {
 
 .bg-home {
   position: fixed;
-  top: calc(env(safe-area-inset-top) * -1);
-  right: 0;
-  bottom: calc(env(safe-area-inset-bottom) * -1);
-  left: 0;
+  inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -100,10 +95,7 @@ body {
 
 .bg-gradient {
   position: fixed;
-  top: calc(env(safe-area-inset-top) * -1);
-  right: 0;
-  bottom: calc(env(safe-area-inset-bottom) * -1);
-  left: 0;
+  inset: 0;
   z-index: 1;
   background: var(--bg-overlay);
 }
@@ -251,25 +243,25 @@ body {
   }
 
   .container-fluid {
-    padding: 1.3rem 1.1rem 1.45rem;
+    padding: 1.1rem 0.95rem 1.25rem;
   }
 
   .fst-italic {
-    font-size: clamp(1.72rem, 7.8vw, 2.65rem);
+    font-size: clamp(1.5rem, 7.2vw, 2.35rem);
     line-height: 1.12;
-    margin-bottom: 0.95rem;
+    margin-bottom: 0.85rem;
   }
 
   .mb-5 {
     max-width: 34ch;
-    font-size: clamp(0.98rem, 3.9vw, 1.12rem);
-    line-height: 1.56;
+    font-size: clamp(0.9rem, 3.6vw, 1.06rem);
+    line-height: 1.52;
   }
 
   .btn {
-    width: 3rem;
-    height: 3rem;
-    font-size: 1.12rem;
+    width: 2.75rem;
+    height: 2.75rem;
+    font-size: 1.06rem;
   }
 }
 
@@ -283,16 +275,16 @@ body {
   }
 
   .container-fluid {
-    padding: 1.15rem 0.95rem 1.2rem;
+    padding: 1rem 0.9rem 1.1rem;
   }
 
   .fst-italic {
-    font-size: clamp(1.55rem, 7.4vw, 2.2rem);
+    font-size: clamp(1.38rem, 7vw, 1.95rem);
   }
 
   .mb-5 {
     max-width: 30ch;
-    font-size: 0.95rem;
+    font-size: 0.9rem;
   }
 }
 
@@ -307,14 +299,14 @@ body {
   }
 
   .mb-5 {
-    font-size: 0.92rem;
+    font-size: 0.88rem;
     line-height: 1.4;
   }
 
   .btn {
-    width: 2.7rem;
-    height: 2.7rem;
-    font-size: 1.02rem;
+    width: 2.45rem;
+    height: 2.45rem;
+    font-size: 0.96rem;
   }
 }
 
