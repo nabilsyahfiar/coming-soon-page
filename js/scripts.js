@@ -1,4 +1,6 @@
-window.addEventListener("DOMContentLoaded", () => {
+"use strict";
+
+(() => {
   const root = document.documentElement;
   const media = window.matchMedia("(prefers-color-scheme: dark)");
 
@@ -8,9 +10,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
   applyTheme(media.matches);
 
-  if (typeof media.addEventListener === "function") {
-    media.addEventListener("change", (event) => applyTheme(event.matches));
-  } else if (typeof media.addListener === "function") {
-    media.addListener((event) => applyTheme(event.matches));
-  }
-});
+  media.addEventListener("change", (event) => {
+    applyTheme(event.matches);
+  });
+})();

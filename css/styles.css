@@ -1,4 +1,5 @@
-:root {
+:root,
+:root[data-theme="light"] {
   --bg-base: #f3f6fb;
   --card-bg: rgba(255, 255, 255, 0.64);
   --card-bg-2: rgba(241, 248, 255, 0.74);
@@ -166,10 +167,6 @@ body {
   text-align: center;
 }
 
-.nowrap {
-  white-space: nowrap;
-}
-
 .social-icons {
   position: fixed;
   z-index: 3;
@@ -320,6 +317,41 @@ body {
   .mb-5 {
     opacity: 1;
     transform: none;
+  }
+}
+
+@media (prefers-contrast: more) {
+  :root {
+    --card-border: rgba(19, 40, 70, 0.5);
+    --button-border: rgba(19, 40, 70, 0.4);
+    --text-subtle: #10243b;
+  }
+
+  :root[data-theme="dark"] {
+    --card-border: rgba(155, 184, 215, 0.45);
+    --button-border: rgba(155, 184, 215, 0.5);
+    --text-subtle: #d9e6f5;
+  }
+}
+
+@media (prefers-contrast: less) {
+  :root {
+    --card-border: rgba(19, 40, 70, 0.08);
+    --card-shadow: 0 12px 30px rgba(18, 38, 63, 0.08), 0 0 40px rgba(14, 165, 233, 0.04);
+  }
+
+  :root[data-theme="dark"] {
+    --card-border: rgba(155, 184, 215, 0.08);
+    --card-shadow: 0 12px 30px rgba(2, 8, 18, 0.2), 0 0 40px rgba(56, 189, 248, 0.04);
+  }
+
+  .bg-home {
+    filter: none;
+  }
+
+  .masthead-content {
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
   }
 }
 
